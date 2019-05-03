@@ -122,7 +122,7 @@ Bean is POJO object + metadata shortly.
 * ORM -  technique for converting data between incompatible type systems using object-oriented programming languages. Spring provide interface for famous ORM tools as Hibernate
 * OXM - Spring Object XML Mappers
 * JMS - allows integrations with JMS (Java messaging service)
-* Transactions - allows creatino of transactional applications
+* Transactions - allows creation of transactional applications
 
 ### Web
 * WebSocket -  creates a persistent connection between a user and a web service for 2-way communication. 
