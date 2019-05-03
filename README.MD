@@ -21,7 +21,7 @@ These web servers woudl typically be housed in a 'server room' and connected to 
 
 We vill be using a web server called Tomcat in this course, and intalling and running it on our local machine for development purposes.
 
-### What are compoents ?
+### What are components ?
 JEE appplications are made up of components. They are self contained functional software assembled into a Java EE application. For example: Servlet, JSP pages, JSF...
 
 ## Spring
