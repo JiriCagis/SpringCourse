@@ -11,7 +11,7 @@ Some of the core technologies used in JEE are JDBC, JNDI, EJBs, RMI, JSP and Jav
 
 ### Overview
 <div align="center">
-	<img src="images/image1.png"/>
+	<img src="images/image1.PNG"/>
 </div>
 
 ### Where does our web app code run ?
@@ -141,6 +141,6 @@ Spring is based on MVC (Model View Controller) design pattern.
 * Controller: manages all the requests and has the logic to decide where to forward them. A "Servlet" plays the role of controller here.
 
 <div align="center">
-	<img src="images/image3.png"/>
+	<img src="images/image3.PNG"/>
 </div>
  
