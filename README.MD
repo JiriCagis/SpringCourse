@@ -130,7 +130,7 @@ Bean is POJO object + metadata shortly.
 * Web - contains MVC architecture, JSP (Java servlet pages - are a server-side programming technology that enables the creation of dynamic web pages, it helps developers embed java code in normal HTML pages by making use of special JSP tags) 
 * Portlet - similar as servlets but servlets can render complete web pages, whereas portlets renders html fragments.
 
-## Test
+### Test
 This module provides support for creating applications for unit testing and integration testing.
 
 ## Concept of programming model in Spring
@@ -144,3 +144,22 @@ Spring is based on MVC (Model View Controller) design pattern.
 	<img src="images/image3.PNG"/>
 </div>
  
+## Bean scopes
+When defining a <bean> you have the option of declaring a scope for that bean. For example, to force Spring to produce a new bean instance each time one is needed, you should declare the bean's scope attribute to be prototype. Similarly, if you want Spring to return the same bean instance each time one is needed, you should declare the bean's scope attribute to be singleton.
+
+The Spring Framework supports the following five scopes, three of which are available only if you use a web-aware ApplicationContext. The default scope for bean is a singleton.
+
+### Singleton
+This scopes the bean definition to a single instance per Spring IoC container (default).
+
+### Prototype
+This scopes a single bean definition to have any number of object instances.
+
+### Request
+This scopes a bean definition to an HTTP request. Only valid in the context of a web-aware Spring ApplicationContext.
+
+### Session
+This scopes a bean definition to an HTTP session. Only valid in the context of a web-aware Spring ApplicationContext.
+	
+### Global-session
+This scopes a bean definition to a global HTTP session. Only valid in the context of a web-aware Spring ApplicationContext.
