@@ -147,7 +147,7 @@ Spring is based on MVC (Model View Controller) design pattern.
 ## Bean scopes
 When defining a <bean> you have the option of declaring a scope for that bean. For example, to force Spring to produce a new bean instance each time one is needed, you should declare the bean's scope attribute to be prototype. Similarly, if you want Spring to return the same bean instance each time one is needed, you should declare the bean's scope attribute to be singleton.
 
-The Spring Framework supports the following five scopes, three of which are available only if you use a web-aware ApplicationContext.
+The Spring Framework supports the following five scopes, three of which are available only if you use a web-aware ApplicationContext. The default scope for bean is a singleton.
 
 ### Singleton
 This scopes the bean definition to a single instance per Spring IoC container (default).
