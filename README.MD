@@ -189,8 +189,30 @@ Since Java 7, three additional annotations have been added to the language:
 * @FunctionalInterface - Specifies that the type declaration is intended to be a functional interface, since Java 8.
 * @Repeatable - Specifies that the annotation can be applied more than once to the same declaration, since Java 8.
 
-### Xml base configuration
+### XML based configuration
 **Pros**
-f
 
-### Pros and const using annotation for define beans
+* XML configuration is outside the Java classes. The whole configuration is limited to a few files and can be viewed easily. If configuration needs to be changed then the code does not need to go through the process of recompilation.
+* Using XML helps to centralize configuration metadata. The configuration code is located in a few text files and can be changed easily, if required.
+* XML configuration is more verbose and might be a good fit for beginners to understand what is going on. 
+
+**Cons**
+* XML typing can be error prone and typos are difficult to debug. Even though we have some great tools like the spring-ide that helps us to write error free xml configuration files, manual typing sometimes becomes unavoidable. Also XML is not type safe e.g. Java code via the compiler will validate types while compiling, and throw an error if you try to assign the wrong type to a variable. This also applies to method arguments, since you are passing explicit types to them. The Java language is designed to enforce type. This safety is not available in XML
+* For example. in XML it is possible to add an argument to a bean's constructor but to forget injection this argument when defining the bean in the XML. This is not possible with annotations since mistakes of this type will be flagged by the compiler.
+
+
+### Annotation based configurations
+**Pros**
+
+* Using annotations usually leads to shorter and more concise configurations vs XML.
+* Some developers prefer to have their dependency wiring closer to the source and hence might prefer annotations over xml.
+* The annotations ensure type safety. It can also self document a class, taht you can look in the class and truly see what is being injected by Spring.
+
+
+**Cons**
+
+* Annotations reside in your source code.
+* Annotations leads to more decentralized configuration of metadata whereby all metadata is strewn all over your code base. This might lead to a less control over the configuration information.
+* Annotations can clutter the POJO. You could actually argue that it is no longer a POJO anymore.
+* If you change, add or delete annotations, it requires code recompilation.
+* Annotations may be considered less intuitive in nature because it is brevity expecially if you are a beginner.
