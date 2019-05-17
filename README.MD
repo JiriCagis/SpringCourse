@@ -163,3 +163,34 @@ This scopes a bean definition to an HTTP session. Only valid in the context of a
 	
 ### Global-session
 This scopes a bean definition to a global HTTP session. Only valid in the context of a web-aware Spring ApplicationContext.
+
+## Java annotations
+Annotation is a form of syntactic metadata that can be added to Java source code. Annotatino you can place on  classes, methods, variables, parameters.
+
+### History
+The Java platform has various ad-hoc annotation mechanisms—for example, the transient modifier, or the @deprecated javadoc tag. The Java Specification Request JSR-175 introduced the general-purpose annotation (also known as metadata) facility to the Java Community Process in 2002; it gained approval in September 2004.[4] Annotations became available in the language itself beginning with version 1.5 of the Java Development Kit (JDK). The apt tool provided a provisional interface for compile-time annotation processing in JDK version 1.5; JSR-269 formalized this, and it became integrated into the javac compiler in version 1.6.
+
+### Built-in annotations
+Java defines a set of annotations that are built into the language. Of the seven standard annotations, three are part of java.lang, and the remaining four are imported from java.lang.annotation.
+
+Annotations applied to Java code:
+* @Override - Checks that the method is an override. Causes a compilation error if the method is not found in one of the parent classes or implemented interfaces.
+* @Deprecated - Marks the method as obsolete. Causes a compile warning if the method is used.
+* @SuppressWarnings - Instructs the compiler to suppress the compile time warnings specified in the annotation parameters.
+
+Annotations applied to other annotations (also known as "Meta Annotations"):
+* @Retention - Specifies how the marked annotation is stored, whether in code only, compiled into the class, or available at runtime through reflection.
+* @Documented - Marks another annotation for inclusion in the documentation.
+* @Target - Marks another annotation to restrict what kind of Java elements the annotation may be applied to.
+* @Inherited - Marks another annotation to be inherited to subclasses of annotated class (by default annotations are not inherited to subclasses).
+
+Since Java 7, three additional annotations have been added to the language:
+* @SafeVarargs - Suppress warnings for all callers of a method or constructor with a generics varargs parameter, since Java 7.
+* @FunctionalInterface - Specifies that the type declaration is intended to be a functional interface, since Java 8.
+* @Repeatable - Specifies that the annotation can be applied more than once to the same declaration, since Java 8.
+
+### Xml base configuration
+**Pros**
+f
+
+### Pros and const using annotation for define beans
