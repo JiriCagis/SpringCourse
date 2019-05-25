@@ -232,7 +232,7 @@ Prior to annotations, the behavior of the Spring Framework was largely controlle
 ### Spring DataAccess annotations
 * **@Transactional**:  is not enough to activate the transactional behaviour. The annotation is simply a metadata that can be consumed by some runtime infrastructure. This infrastructure uses the metadata to configure the appropriate beans with transactional behaviour.
 * **@Cacheable**: each time the method with annotation is called, the cache is checked to see whether the invocation has been already executed and does not have to be repeated.
-* **@@CachePut**: the method with annotation will always be executed and the result cached.
+* **@CachePut**: the method with annotation will always be executed and the result cached.
 * **@CacheEvict**: is not that you always want to populate the cache with more and more data. Sometimes you may want remove some cache data so that you can populate the cache with some fresh values. In such a case use the CacheEvict annotation.
 * **@CacheConfig**: annotation helps to streamline some of the cache information at one place. 
 
