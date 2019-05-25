@@ -208,3 +208,33 @@ Prior to annotations, the behavior of the Spring Framework was largely controlle
 * Annotations can clutter the POJO. You could actually argue that it is no longer a POJO anymore.
 * If you change, add or delete annotations, it requires code recompilation.
 * Annotations may be considered less intuitive in nature because it is brevity expecially if you are a beginner.
+
+### Core Spring annotations
+
+* **@Required**: annotation indicates that the affected bean must be populated at configuration time with the required property.
+* **@Autowired**: annotation injects object dependency implicitly. This annotation is applied on fields, setter methods, and constructors.
+* **@Qualifier**: This annotation is used along with @Autowired annotation. When you need more control of the dependency injection process, @Qualifier can be used. @Qualifier can be specified on individual constructor arguments or method parameters. This annotation is used to avoid confusion which occurs when you create more than one bean of the same type and want to wire only one of them with a property.
+* **@Configuration**: is an analog for XML configuration file – it is configuration using Java class. Java class annotated with @Configuration is a configuration by itself and will have methods to instantiate and configure the dependencies.
+* **@ComponentScan**: annotation to allow Spring to know the packages to scan for annotated components. @ComponentScan is also used to specify base packages using basePackageClasses or basePackage attributes to scan. If specific packages are not defined, scanning will occur from the package of the class that declares this annotation.
+* **@Bean**: annotation works with @Configuration to create Spring beans. Annotation is used at the method level.
+* **@Value**:  indicates a default value expression for the field or parameter to initialize the property with.
+
+### Spring stereotype annotations
+* **@Component**:  annotation marks the Java class as a bean or say component so that the component-scanning mechanism of Spring can add into the application context.
+* **@Controller**: annotation is used to indicate the class is a Spring controller. This annotation can be used to identify controllers for Spring MVC or Spring WebFlux.
+* **@Service**: marks a Java class that performs some service, such as execute business logic, perform calculations and call external APIs. This annotation is a specialized form of the Component annotation intended to be used in the service layer.
+* **@Repository**: annotation is used on Java classes which directly access the database. The Repository annotation works as marker for any class that fulfills the role of repository or Data Access Object. This annotation has a automatic translation feature. For example, when an exception occurs in the Repository there is a handler for that exception and there is no need to add a try catch block.
+
+### Spring boot annotations
+* **@EnableAutoConfiguration**: annotation is usually placed on the main application class. The annotation implicitly defines a base “search package”. This annotation tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings.
+* **@SpringBootApplication**: is a convenient annotation that adds three annotations (Configuration, EnableAutoConfiguration, ComponentScan) into one.
+
+### Spring DataAccess annotations
+* **@Transactional**:  is not enough to activate the transactional behaviour. The annotation is simply a metadata that can be consumed by some runtime infrastructure. This infrastructure uses the metadata to configure the appropriate beans with transactional behaviour.
+* **@Cacheable**: each time the method with annotation is called, the cache is checked to see whether the invocation has been already executed and does not have to be repeated.
+* **@@CachePut**: the method with annotation will always be executed and the result cached.
+* **@CacheEvict**: is not that you always want to populate the cache with more and more data. Sometimes you may want remove some cache data so that you can populate the cache with some fresh values. In such a case use the CacheEvict annotation.
+* **@CacheConfig**: annotation helps to streamline some of the cache information at one place. 
+
+### Task Execution and Scheduling Annotations
+
